@@ -70,7 +70,9 @@ link_directories(${SWIPL_LIBRARY_DIRS})
 
 
 #for python scripts
-catkin_install_python(PROGRAMS scripts/goal_topic_test.py
+catkin_install_python(PROGRAMS 
+scripts/goal_topic_test.py
+scripts/read_text_file.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
