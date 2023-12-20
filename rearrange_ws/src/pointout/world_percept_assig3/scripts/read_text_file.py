@@ -32,17 +32,26 @@ def send_goal(target_name, target_x, target_y, target_orientation_z, target_orie
 
 def main():
     rospy.init_node('text_file_reader', anonymous=True)
-    text = read_text_file('command.txt')
 
-    if text is not None:
-        rospy.loginfo("Read from file: " + text)
-        if text.lower() == "i want to drink":
-            success = send_goal("cola", 1.3, 1.0, 0.0, 1.0)
-            if success:
-                rospy.loginfo("Goal sent and executed successfully.")
-            else:
-                rospy.loginfo("Failed to execute goal.")
-        # 可以根据需要添加更多条件
+    while not rospy.is_shutdown():
+        text = read_text_file('command.txt')
+
+        if text:
+            rospy.loginfo("Read from file: " + text)
+
+            if text.lower() == "i want to drink":
+                success = send_goal("cola", 1.3, 1.0, 0.0, 1.0)
+                if success:
+                    rospy.loginfo("Goal sent and executed successfully.")
+                else:
+                    rospy.loginfo("Failed to execute goal.")
+                break  
+
+            with open('command.txt', 'w') as file:
+                file.write('')
+
+        rospy.sleep(1) 
 
 if __name__ == '__main__':
     main()
+

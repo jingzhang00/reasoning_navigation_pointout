@@ -1,5 +1,8 @@
 # ssy236_project
 
+**Group 3**
+**Qun Zhang, Peilin Lyu, Luming Wang, Jing Zhang**
+
 ```
 .  
 +---rearrange_ws
@@ -11,21 +14,28 @@
         +---reasoning
      
 ```
-## 2023/12/14 QunZhang
+## 2023/12/14 QunZhang, Luming Wang
 ```
 PLS read the readme inside ssy236_project\rearrange_ws\src\pointout\world_percept_assig3, but notice that you need to source tiago ws...  
 It can naviagtion and point out, even through it is not very accurate. 
 ```
 
-## 2023/12/19 QunZhang
+## 2023/12/19 QunZhang, Luming Wang
 ```
 Update a new node that can read the command in txt and pub to goal_rtopic_test node to move tiago
 ```
- ### TODO List:   
+
+## 2023/12/20 QunZhang, Luming Wang
+```
+Add YOLO as tiago's eye to detect bottle and save command in command.txt   
+It is better to run YOLO in windows, because it is a bit difficult to use camera with docker
+```
+
+### 2023/10/20 TODO List:   
+**Responsible:  Peilin Lyu**
  ```
-Pls help to add cola or Beer in the Gazebo Map....  
-In addition, let's think about how to add learning to reasoning and make it more complex. . . 
-This will be simpler than performing complex operations in ROS.
+1. Pls help to add cola or Beer in the Gazebo Map....  
+2. Add the prolog/Reasoning as tiago's brain
  ```
     
     

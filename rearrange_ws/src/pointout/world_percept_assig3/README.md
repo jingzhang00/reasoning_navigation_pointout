@@ -31,6 +31,12 @@ Here, the node read the command in the txt and publish to the goal_topic_test no
 ```
   rosrun world_percept_assig3 read_text_file.py 
 ``` 
+
+### Run YOLO to save commad:
+```
+  run test_cola.py in windows to detect the bottle and save the command in the command.txt
+  It is better to run the yolo in the windows
+```
   
 
 
