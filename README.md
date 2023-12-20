@@ -31,7 +31,7 @@ Add YOLO as tiago's eye to detect bottle and save command in command.txt
 It is better to run YOLO in windows, because it is a bit difficult to use camera with docker
 ```
 
-### 2023/10/20 TODO List:   
+### 2023/12/20 TODO List:   
 **Responsible:  Peilin Lyu**
  ```
 1. Pls help to add cola or Beer in the Gazebo Map....  
