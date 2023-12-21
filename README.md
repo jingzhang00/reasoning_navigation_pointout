@@ -31,11 +31,10 @@ Add YOLO as tiago's eye to detect bottle and save command in command.txt
 It is better to run YOLO in windows, because it is a bit difficult to use camera with docker
 ```
 
-### 2023/12/20 TODO List:   
-**Responsible:  Peilin Lyu**
+## 2023/12/21 Peilin:   
  ```
-1. Pls help to add cola or Beer in the Gazebo Map....  
-2. Add the prolog/Reasoning as tiago's brain
+1. Added cola and beer into tst3.world. Please save it in ~\tiago_public_ws\src\pal_gazebo_worlds\worlds, then replace the argument of world with "tst3" in tiago_navigation.launch.
+2. Add the prolog/Reasoning as tiago's brain: in progress.
  ```
     
     
