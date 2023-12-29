@@ -34,9 +34,12 @@ Here, the node read the command in the txt and publish to the goal_topic_test no
 
 ### Run YOLO to save commad:
 ```
-  run test_cola.py in windows to detect the bottle and save the command in the command.txt
+  run tes.py in the test folder in windows to detect the bottle and save the command in the command.txt
+  !remember to change the path in the test.py 
   It is better to run the yolo in the windows
 ```
+
+
   
 
 

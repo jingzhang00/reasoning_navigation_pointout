@@ -36,5 +36,10 @@ It is better to run YOLO in windows, because it is a bit difficult to use camera
 1. Added cola and beer into tst3.world. Please save it in ~\tiago_public_ws\src\pal_gazebo_worlds\worlds, then replace the argument of world with "tst3" in tiago_navigation.launch.
 2. Add the prolog/Reasoning as tiago's brain: in progress.
  ```
+
+ ## 2023/12/20 QunZhang, Luming Wang, Peilin:   
+```
+Add decision tree and yolo
+```
     
     

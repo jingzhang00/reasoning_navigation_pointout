@@ -1,0 +1,12 @@
+Age
+Displayed_Item_Bottle
+Displayed_Item_Wine Glass
+Room_Temperature_Cool
+Room_Temperature_Hot
+Room_Temperature_Moderate
+Time_of_Day_Day
+Time_of_Day_Night
+Occasion_Casual
+Occasion_Formal
+Gender_Female
+Gender_Male
