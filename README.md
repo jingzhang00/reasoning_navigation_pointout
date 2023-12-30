@@ -40,6 +40,7 @@ It is better to run YOLO in windows, because it is a bit difficult to use camera
  ## 2023/12/29 QunZhang, Peilin:   
 ```
 Add decision tree and yolo
+The location of the world is /tiago_public_ws/src/pal_gazebo_worlds/worlds/small_office.world, use files in tst to replace it....
 ```
     
     
