@@ -37,7 +37,7 @@ It is better to run YOLO in windows, because it is a bit difficult to use camera
 2. Add the prolog/Reasoning as tiago's brain: in progress.
  ```
 
- ## 2023/12/20 QunZhang, Luming Wang, Peilin:   
+ ## 2023/12/29 QunZhang, Peilin:   
 ```
 Add decision tree and yolo
 ```
