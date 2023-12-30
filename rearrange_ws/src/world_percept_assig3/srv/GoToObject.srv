@@ -1,0 +1,15 @@
+# Request part of the service
+# Name of the object to go to
+string target_name
+
+---
+# Response part of the service
+# Calculated linear velocity to move towards the object
+float64 linear_velocity
+
+float64 angular_velocity
+
+
+bool success
+
+
