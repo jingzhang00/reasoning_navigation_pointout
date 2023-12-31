@@ -20,3 +20,8 @@ In terminal 1:
 source devel/setup.bash
 roslaunch world_percept_assig3 reasoning.launch
 ```
+
+In terminal 2:
+```bash
+/bin/python /home/user/exchange/ssy236_project/rearrange_ws/src/world_percept_assig3/scripts/interface.py
+```
