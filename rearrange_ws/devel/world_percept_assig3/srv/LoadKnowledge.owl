@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:ros="http://www.ros.org/ont/ROS.owl#"
+   xmlns:wf="http://www.ease-crc.org/ont/EASE-WF.owl#"
+>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Execution">
+    <dul:defines rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Task"/>
+    <dul:describes rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wf:hasBinding rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Binding_confirm"/>
+    <wf:hasBinding rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Binding_start"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#ROSQueryingExecution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Binding_confirm">
+    <wf:hasBindingRole rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Output_confirm"/>
+    <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE-WF.owl#RoleFillerBinding"/>
+    <wf:hasBindingFiller rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledgeResponse"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/world_percept_assig3.owl#LoadKnowledgeRequest_start">
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#int64"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">start</ros:hasSlotName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Task">
+    <dul:hasParameter rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Output_confirm"/>
+    <dul:hasParameter rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Input_start"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Binding_start">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wf:hasBindingFiller rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledgeRequest"/>
+    <wf:hasBindingRole rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Input_start"/>
+    <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE-WF.owl#RoleFillerBinding"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasResponseType rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledgeResponse"/>
+    <ros:hasRequestType rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledgeReqest"/>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9d9359c2e08422f16683a8ebec668cb6</ros:hasMD5>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#ServiceInterface"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">world_percept_assig3/LoadKnowledge</ros:hasTypePath>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledgeResponse">
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b37994baa157ef8535427a2de0e06206</ros:hasMD5>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">world_percept_assig3/LoadKnowledgeResponse</ros:hasTypePath>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/world_percept_assig3.owl#LoadKnowledgeResponse_confirm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/world_percept_assig3.owl#LoadKnowledgeResponse_confirm">
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirm</ros:hasSlotName>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#bool"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Input_start">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledgeReqest">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/world_percept_assig3.owl#LoadKnowledgeRequest_start"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">world_percept_assig3/LoadKnowledgeRequest</ros:hasTypePath>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f3cefc2a81c697b38bf59faba5b0cd16</ros:hasMD5>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#LoadKnowledge_Output_confirm">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+</rdf:RDF>

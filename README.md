@@ -41,5 +41,10 @@ It is better to run YOLO in windows, because it is a bit difficult to use camera
 ```
 Add decision tree and yolo
 ```
+
+ ## 2024/1/1 QunZhang
+```
+Add text_file_reader_node and goal_topic_node
+```
     
     

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:ros="http://www.ros.org/ont/ROS.owl#"
+   xmlns:wf="http://www.ease-crc.org/ont/EASE-WF.owl#"
+>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Output_objects">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Output_obj_found">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList">
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">world_percept_assig3/GetSceneObjectList</ros:hasTypePath>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">49b647e60541a19da96e1aeac31fdfb8</ros:hasMD5>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#ServiceInterface"/>
+    <ros:hasResponseType rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectListResponse"/>
+    <ros:hasRequestType rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectListReqest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Binding_objects">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE-WF.owl#RoleFillerBinding"/>
+    <wf:hasBindingRole rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Output_objects"/>
+    <wf:hasBindingFiller rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectListResponse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Execution">
+    <wf:hasBinding rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Binding_objects"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wf:hasBinding rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Binding_obj_found"/>
+    <wf:hasBinding rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Binding_message"/>
+    <dul:describes rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList"/>
+    <dul:defines rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Task"/>
+    <wf:hasBinding rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Binding_object_name"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#ROSQueryingExecution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Task">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dul:hasParameter rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Input_object_name"/>
+    <dul:hasParameter rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Output_objects"/>
+    <dul:hasParameter rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Output_obj_found"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+    <dul:hasParameter rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Output_message"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Binding_message">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE-WF.owl#RoleFillerBinding"/>
+    <wf:hasBindingRole rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Output_message"/>
+    <wf:hasBindingFiller rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectListResponse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Binding_obj_found">
+    <wf:hasBindingFiller rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectListResponse"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE-WF.owl#RoleFillerBinding"/>
+    <wf:hasBindingRole rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Output_obj_found"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectListReqest">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/world_percept_assig3.owl#GetSceneObjectListRequest_object_name"/>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2f12226348d323c2e5b2031b3da53f1b</ros:hasMD5>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">world_percept_assig3/GetSceneObjectListRequest</ros:hasTypePath>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectListResponse">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/world_percept_assig3.owl#GetSceneObjectListResponse_objects"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/world_percept_assig3.owl#GetSceneObjectListResponse_obj_found"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/world_percept_assig3.owl#GetSceneObjectListResponse_message"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">world_percept_assig3/GetSceneObjectListResponse</ros:hasTypePath>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a002ec9697f31a7c31d8cda3e8964929</ros:hasMD5>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Binding_object_name">
+    <wf:hasBindingRole rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Input_object_name"/>
+    <wf:hasBindingFiller rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectListRequest"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE-WF.owl#RoleFillerBinding"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/world_percept_assig3.owl#GetSceneObjectListResponse_message">
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">message</ros:hasSlotName>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/world_percept_assig3.owl#GetSceneObjectListResponse_objects">
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#MessageSlot"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/gazebo_msgs.owl#ModelStates"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/world_percept_assig3.owl#GetSceneObjectListRequest_object_name">
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">object_name</ros:hasSlotName>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Input_object_name">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/world_percept_assig3.owl#GetSceneObjectListResponse_obj_found">
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#bool"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obj_found</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#GetSceneObjectList_Output_message">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -31,6 +31,11 @@ def predict_drink():
     user_input = user_input.reindex(columns=feature_order, fill_value=0)
     predicted_drink = clf.predict(user_input)[0]
     
+    #! This is where the drink prediction is written to a file
+    with open('/home/user/exchange/ssy236_project/rearrange_ws/src/world_percept_assig3/scripts/find_things.txt', 'w') as file:
+        file.write(predicted_drink)
+
+    
     messagebox.showinfo("Predicted Drink", f"The predicted drink is: {predicted_drink}")
 
 root = tk.Tk()

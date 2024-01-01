@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:ros="http://www.ros.org/ont/ROS.owl#"
+   xmlns:wf="http://www.ease-crc.org/ont/EASE-WF.owl#"
+>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObjectReqest">
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2f12226348d323c2e5b2031b3da53f1b</ros:hasMD5>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/world_percept_assig3.owl#ProcessObjectRequest_object_name"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">world_percept_assig3/ProcessObjectRequest</ros:hasTypePath>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Execution">
+    <wf:hasBinding rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Binding_object_name"/>
+    <wf:hasBinding rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Binding_message"/>
+    <dul:defines rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Task"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#ROSQueryingExecution"/>
+    <dul:describes rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject"/>
+    <wf:hasBinding rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Binding_success"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/world_percept_assig3.owl#ProcessObjectResponse_success">
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#bool"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">success</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Binding_object_name">
+    <wf:hasBindingRole rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Input_object_name"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wf:hasBindingFiller rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObjectRequest"/>
+    <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE-WF.owl#RoleFillerBinding"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Input_object_name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Binding_success">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE-WF.owl#RoleFillerBinding"/>
+    <wf:hasBindingRole rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Output_success"/>
+    <wf:hasBindingFiller rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObjectResponse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/world_percept_assig3.owl#ProcessObjectResponse_message">
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">message</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject">
+    <ros:hasRequestType rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObjectReqest"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#ServiceInterface"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">world_percept_assig3/ProcessObject</ros:hasTypePath>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32681a2870f0325b7d011635fd43aac7</ros:hasMD5>
+    <ros:hasResponseType rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObjectResponse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/world_percept_assig3.owl#ProcessObjectRequest_object_name">
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#string"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">object_name</ros:hasSlotName>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Output_success">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Task">
+    <dul:hasParameter rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Output_message"/>
+    <dul:hasParameter rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Output_success"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dul:hasParameter rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Input_object_name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Binding_message">
+    <wf:hasBindingFiller rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObjectResponse"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wf:hasBindingRole rdf:resource="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Output_message"/>
+    <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE-WF.owl#RoleFillerBinding"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObject_Output_message">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/world_percept_assig3.owl#ProcessObjectResponse">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/world_percept_assig3.owl#ProcessObjectResponse_message"/>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">937c9679a518e3a18d831e57125ea522</ros:hasMD5>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">world_percept_assig3/ProcessObjectResponse</ros:hasTypePath>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/world_percept_assig3.owl#ProcessObjectResponse_success"/>
+  </rdf:Description>
+</rdf:RDF>

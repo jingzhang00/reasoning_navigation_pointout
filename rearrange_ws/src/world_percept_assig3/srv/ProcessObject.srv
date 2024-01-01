@@ -1,0 +1,5 @@
+# ProcessObject.srv
+string object_name
+---
+bool success
+string message

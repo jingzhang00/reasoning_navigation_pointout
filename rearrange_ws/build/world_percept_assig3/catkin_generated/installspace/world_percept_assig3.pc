@@ -1,0 +1,8 @@
+prefix=/home/user/exchange/ssy236_project/rearrange_ws/install
+
+Name: world_percept_assig3
+Description: Description of world_percept_assig3
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs gazebo_msgs geometry_msgs rosprolog

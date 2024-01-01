@@ -28,6 +28,16 @@ add_service_files(
   GetSceneObjectList.srv
   LoadKnowledge.srv
   GoToObject.srv
+  SendGoal.srv
+  ProcessObject.srv
+)
+
+#for python scripts
+catkin_install_python(PROGRAMS 
+scripts/object_list_node.py
+scripts/text_file_reader_node.py
+scripts/goal_topic_node.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 ## Generate actions in the 'action' folder
