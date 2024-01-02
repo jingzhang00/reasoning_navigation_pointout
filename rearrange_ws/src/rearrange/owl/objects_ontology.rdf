@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/student/ontologies/2023/10/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/student/ontologies/2023/10/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#isOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#isOn">
+        <rdfs:domain rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Beverage"/>
+        <rdfs:range rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#table"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#Beverage -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#Beverage"/>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#Objects -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#Objects"/>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#Robot -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#Robot">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#beer -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#beer">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Beverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_0 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_0">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_1 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_1">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_2 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_2">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_3 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_3">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_4 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_4">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_5 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_5">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_6 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf_6">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet_0 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet_0">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet_1 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet_1">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet_2 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet_2">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet_3 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet_3">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet_4 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#cabinet_4">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#coke -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#coke">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Beverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#juice -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#juice">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Beverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#table -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#table">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#table_0 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#table_0">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#table_1 -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#table_1">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Furniture"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#beer -->
+
+    <owl:NamedIndividual rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#beer"/>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#body -->
+
+    <owl:NamedIndividual rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#body">
+        <rdf:type rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Robot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf -->
+
+    <owl:NamedIndividual rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#bookshelf"/>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#bowl -->
+
+    <owl:NamedIndividual rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#bowl"/>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#cafe_table -->
+
+    <owl:NamedIndividual rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#cafe_table"/>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#coke -->
+
+    <owl:NamedIndividual rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#coke"/>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#first_2015_trash_can -->
+
+    <owl:NamedIndividual rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#first_2015_trash_can"/>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#manipulator -->
+
+    <owl:NamedIndividual rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#manipulator">
+        <rdf:type rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Robot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#rectangular_table -->
+
+    <owl:NamedIndividual rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#rectangular_table"/>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#table -->
+
+    <owl:NamedIndividual rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#table"/>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#wheel -->
+
+    <owl:NamedIndividual rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#wheel">
+        <rdf:type rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Robot"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

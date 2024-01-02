@@ -1,0 +1,3 @@
+# Drink.msg
+string name
+
