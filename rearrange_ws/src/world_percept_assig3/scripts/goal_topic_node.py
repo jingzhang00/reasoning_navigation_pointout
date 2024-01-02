@@ -59,7 +59,7 @@ def handle_send_goal(req):
         except Exception as e:
             rospy.loginfo("Error: " + str(e))
             return SendGoalResponse(False)
-    elif req.target_name == "Beer":
+    elif req.target_name == "beer":
         try:
             
             # Execute command to expand the arm for the operation

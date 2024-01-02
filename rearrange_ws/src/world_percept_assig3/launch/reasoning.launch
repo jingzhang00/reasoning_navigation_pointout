@@ -6,6 +6,7 @@
   <node name="map_generator_node" pkg="world_percept_assig3" type="map_generator_node" output="screen"/>
   <node name="text_file_reader_node" pkg="world_percept_assig3" type="text_file_reader_node.py" output="screen"/>
   <node name="object_list_node" pkg="world_percept_assig3" type="object_list_node.py" output="screen" args=""/>
+  <node name="goal_topic_node" pkg="world_percept_assig3" type="goal_topic_node.py" output="screen" args=""/>
   
 
 
