@@ -1,3 +1,0 @@
-# Drink.msg
-string name
-
