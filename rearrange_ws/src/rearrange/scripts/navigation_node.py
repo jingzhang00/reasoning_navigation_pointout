@@ -6,7 +6,8 @@ from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 from geometry_msgs.msg import PoseStamped
 from rearrange.msg import NavigateDrinkAction, NavigateDrinkFeedback, NavigateDrinkResult
 import json
-
+import tf
+import math
 
 file_path = '/home/user/exchange/ssy236_project/rearrange_ws/src/rearrange/queries/object_pose.json'
 
@@ -33,6 +34,33 @@ def expected_location(drink_name, object_data):
             return item.get("Expected Location")
     return None
 
+def location_offset(target_pose_x, target_pose_y, target_orientation_z, target_orientation_w):
+    """
+    Adjusts the location offset based on the target_pose_y value.
+    If target_pose_y is positive, it adjusts target_pose_x by -0.5.
+    If target_pose_y is negative, it adjusts target_pose_x by +1.2 and rotates the orientation by 180 degrees around the Z-axis.
+    """
+    if target_pose_y > 0:
+        target_pose_x_new = target_pose_x - 0.5
+        target_pose_y_new = target_pose_y
+        target_orientation_z_new = target_orientation_z
+        target_orientation_w_new = target_orientation_w
+    else:
+        target_pose_x_new = target_pose_x + 1.2
+        target_pose_y_new = target_pose_y
+
+        # Original orientation quaternion
+        original_quaternion = [0, 0, target_orientation_z, target_orientation_w]
+        
+        # Quaternion for 180 degree rotation around the Z-axis
+        rotation_quaternion = [0, 0, 1, 0]
+
+        new_quaternion = tf.transformations.quaternion_multiply(original_quaternion, rotation_quaternion)
+        target_orientation_z_new = new_quaternion[2]
+        target_orientation_w_new = new_quaternion[3]
+
+    return target_pose_x_new, target_pose_y_new, target_orientation_z_new, target_orientation_w_new
+
 
 def handle_navigate_drink(goal):
     rospy.loginfo("Received a new goal to navigate to the drink.")
@@ -43,10 +71,11 @@ def handle_navigate_drink(goal):
     drink_goal = MoveBaseGoal()
     drink_goal.target_pose.header.frame_id = "map"
     drink_goal.target_pose.header.stamp = rospy.Time.now()
-    drink_goal.target_pose.pose.position.x = goal.target_x
-    drink_goal.target_pose.pose.position.y = goal.target_y
-    drink_goal.target_pose.pose.orientation.z = goal.target_orientation_z
-    drink_goal.target_pose.pose.orientation.w = goal.target_orientation_w
+    target_pose_x, target_pose_y,target_orientation_z,target_pose_w=location_offset(goal.target_x, goal.target_y, goal.target_orientation_z, goal.target_orientation_w)
+    drink_goal.target_pose.pose.position.x = target_pose_x
+    drink_goal.target_pose.pose.position.y = target_pose_y
+    drink_goal.target_pose.pose.orientation.z = target_orientation_z
+    drink_goal.target_pose.pose.orientation.w = target_pose_w
     rospy.loginfo(f"Sending goal to move_base: {drink_goal}")
 
     move_base_client.send_goal(drink_goal)
@@ -61,10 +90,13 @@ def handle_navigate_drink(goal):
     expected_location_goal = MoveBaseGoal()
     expected_location_goal.target_pose.header.frame_id = "map"
     expected_location_goal.target_pose.header.stamp = rospy.Time.now()
-    expected_location_goal.target_pose.pose.position.x = expected_location_pose["position"]["x"]
-    expected_location_goal.target_pose.pose.position.y = expected_location_pose["position"]["y"]
-    expected_location_goal.target_pose.pose.orientation.z = expected_location_pose["orientation"]["z"]
-    expected_location_goal.target_pose.pose.orientation.w = expected_location_pose["orientation"]["w"]
+    expected_location_x, expected_location_y,expected_orientation_z,expected_location_w=location_offset(expected_location_pose["position"]["x"], expected_location_pose["position"]["y"],
+                                                             expected_location_pose["orientation"]["z"], expected_location_pose["orientation"]["w"])
+    rospy.loginfo("This is expected location x: " + str(expected_location_x) + " and y: " + str(expected_location_y) + " for drink: " + str(goal.drink_name))
+    expected_location_goal.target_pose.pose.position.x = expected_location_x
+    expected_location_goal.target_pose.pose.position.y = expected_location_y
+    expected_location_goal.target_pose.pose.orientation.z = expected_orientation_z
+    expected_location_goal.target_pose.pose.orientation.w = expected_location_w
     rospy.loginfo(f"Sending goal to move_base for expected location: {expected_location_goal}")
 
     move_base_client.send_goal(expected_location_goal)
