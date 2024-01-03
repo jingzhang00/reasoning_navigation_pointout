@@ -28,10 +28,10 @@ add_service_files(
   GetSceneObjectList.srv
 )
 
-add_message_files(
-  FILES
-  Drink.msg
-)
+# add_message_files(
+#   FILES
+#   Drink.msg
+# )
 
 
 ## Generate actions in the 'action' folder

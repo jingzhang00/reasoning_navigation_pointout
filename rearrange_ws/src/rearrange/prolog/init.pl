@@ -8,5 +8,5 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % parse OWL files, register name spaces
-:- owl_parser:owl_parse('package://world_percept_assig3/owl/objects_ontology.rdf').
+:- owl_parser:owl_parse('package://rearrange/owl/objects_ontology.rdf').
 

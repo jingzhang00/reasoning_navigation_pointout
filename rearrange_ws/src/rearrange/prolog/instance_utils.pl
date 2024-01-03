@@ -9,7 +9,7 @@
 :- use_module(library('semweb/rdfs')).
 :- use_module(library('semweb/rdf_db')).
 
-:- rdf_load('/home/user/exchange/ssy236_project/rearrange_ws/src/world_percept_assig3/owl/objects_ontology.rdf').
+:- rdf_load('/home/user/exchange/ssy236_project/rearrange_ws/src/rearrange/owl/objects_ontology.rdf').
 
 getClassPath(Class, Class_path):-
     ((concat_atom(List, '#', Class), length(List, Length), Length > 1) ->
