@@ -40,4 +40,4 @@ get_property(Class, Property, Range) :-
     rdf(PropertyPath, rdfs:range, RangePath),
     getClassPath(RangePath, Range).
 
-# ?- use_module(instance_utils).
+

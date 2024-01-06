@@ -1,8 +1,4 @@
 ```bash
-pip install pyswip
-```
-
-```bash
 cd src/rearrange/worlds
 cp small_office.world /tiago_public_ws/src/pal_gazebo_worlds/worlds
 ```
@@ -16,10 +12,8 @@ roslaunch tiago_2dnav_gazebo tiago_navigation.launch public_sim:=true
 ```
 
 In terminal 2:
-adjust amcl position, then
 ```bash
 source devel/setup.bash
-rosservice call /move_base/clear_costmaps "{}"
 roslaunch rearrange reasoning.launch
 ```
 

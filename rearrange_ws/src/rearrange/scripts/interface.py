@@ -93,10 +93,12 @@ if __name__ == '__main__':
         root.configure(bg='#f0f0f0')
 
         style = ttk.Style()
-        style.configure('TButton', font=('Helvetica', 10))
-        style.configure('TLabel', font=('Helvetica', 10), background='#f0f0f0')
-        style.configure('TEntry', font=('Helvetica', 10))
-        style.configure('TMenu', font=('Helvetica', 10))
+        style.configure('TButton', font=('Helvetica', 14))
+        style.configure('TLabel', font=('Helvetica', 14), background='#f0f0f0')
+        style.configure('TEntry', font=('Helvetica', 14))
+        style.configure('TMenu', font=('Helvetica', 14))
+        style.configure('OptionMenu.TMenubutton', font=('Helvetica', 14))
+
 
         room_temp_var = tk.StringVar()
         time_of_day_var = tk.StringVar()
@@ -104,19 +106,19 @@ if __name__ == '__main__':
         age_var = tk.StringVar()
 
         ttk.Label(root, text="Room Temperature (Hot/Moderate/Cool):").grid(row=0, column=0, padx=10, pady=5, sticky='w')
-        ttk.OptionMenu(root, room_temp_var, "Hot", "Hot", "Moderate", "Cool").grid(row=0, column=1, padx=10, pady=5)
+        ttk.OptionMenu(root, room_temp_var, "Hot", "Hot", "Moderate", "Cool", style='OptionMenu.TMenubutton').grid(row=0, column=1, padx=10, pady=5)
 
         ttk.Label(root, text="Time of Day (Day/Night):").grid(row=1, column=0, padx=10, pady=5, sticky='w')
-        ttk.OptionMenu(root, time_of_day_var, "Day", "Day", "Night").grid(row=1, column=1, padx=10, pady=5)
+        ttk.OptionMenu(root, time_of_day_var, "Day", "Day", "Night", style='OptionMenu.TMenubutton').grid(row=1, column=1, padx=10, pady=5)
 
         ttk.Label(root, text="Gender (Male/Female):").grid(row=3, column=0, padx=10, pady=5, sticky='w')
-        ttk.OptionMenu(root, gender_var, "Male", "Male", "Female").grid(row=3, column=1, padx=10, pady=5)
+        ttk.OptionMenu(root, gender_var, "Male", "Male", "Female", style='OptionMenu.TMenubutton').grid(row=3, column=1, padx=10, pady=5)
 
         ttk.Label(root, text="Age:").grid(row=4, column=0, padx=10, pady=5, sticky='w')
-        ttk.Entry(root, textvariable=age_var).grid(row=4, column=1, padx=10, pady=5)
+        ttk.Entry(root, textvariable=age_var, font=14).grid(row=4, column=1, padx=10, pady=5)
 
-        ttk.Button(root, text="Predict", command=predict_drink).grid(row=5, column=0, columnspan=2, padx=10, pady=10)
-        ttk.Button(root, text="Start", command=start).grid(row=6, column=0, columnspan=2, padx=10, pady=10)
+        ttk.Button(root, text="Predict", command=predict_drink, style='OptionMenu.TMenubutton').grid(row=5, column=0, padx=10, pady=10)
+        ttk.Button(root, text="Start", command=start, style='OptionMenu.TMenubutton').grid(row=5, column=1, padx=10, pady=10)
 
         root.mainloop()
     except rospy.ROSInterruptException:

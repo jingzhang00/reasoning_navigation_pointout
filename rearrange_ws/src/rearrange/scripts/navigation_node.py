@@ -7,110 +7,65 @@ from geometry_msgs.msg import PoseStamped
 from rearrange.msg import NavigateDrinkAction, NavigateDrinkFeedback, NavigateDrinkResult
 import json
 import tf
-import math
 
 file_path = '/home/user/exchange/ssy236_project/rearrange_ws/src/rearrange/queries/object_pose.json'
 
-def load_object_poses(file_path):
+def load_json(file_path):
     try:
         with open(file_path, 'r') as json_file:
-            data = json.load(json_file)
-            return data
+            return json.load(json_file)
     except IOError:
-        rospy.logerr("Failed to load JSON file: " + file_path)
+        rospy.logerr(f"Failed to load JSON file: {file_path}")
         return None
-    
 
-def find_pose(object_name, object_data):
-    for item in object_data:
-        if "Object Name" in item and item["Object Name"] == object_name:
-            return item.get("Object Pose")
-    return None
+def get_pose(data, object_name):
+    for item in data:
+        if item.get("Object Name") == object_name:
+            object_pose = item.get("Object Pose", {})
+            expected_location_name = item.get("Expected Location", None)
+            expected_location_pose = next((obj.get("Object Pose", {}) for obj in data if obj.get("Object Name") == expected_location_name), None)
+            return object_pose, expected_location_pose
+    return None, None
 
-
-def expected_location(drink_name, object_data):
-    for item in object_data:
-        if "Object Name" in item and item["Object Name"] == drink_name:
-            return item.get("Expected Location")
-    return None
-
-def location_offset(target_pose_x, target_pose_y, target_orientation_z, target_orientation_w):
-    """
-    Adjusts the location offset based on the target_pose_y value.
-    If target_pose_y is positive, it adjusts target_pose_x by -0.5.
-    If target_pose_y is negative, it adjusts target_pose_x by +1.2 and rotates the orientation by 180 degrees around the Z-axis.
-    """
-    if target_pose_y > 0:
-        target_pose_x_new = target_pose_x - 0.5
-        target_pose_y_new = target_pose_y
-        target_orientation_z_new = target_orientation_z
-        target_orientation_w_new = target_orientation_w
+def adjust_pose(pose):
+    x, y, z, w = pose['position']['x'], pose['position']['y'], pose['orientation']['z'], pose['orientation']['w']
+    if y > 0:
+        x -= 0.5
     else:
-        target_pose_x_new = target_pose_x + 1.2
-        target_pose_y_new = target_pose_y
-
-        # Original orientation quaternion
-        original_quaternion = [0, 0, target_orientation_z, target_orientation_w]
-        
-        # Quaternion for 180 degree rotation around the Z-axis
+        x += 1.2
+        original_quaternion = [0, 0, z, w]
         rotation_quaternion = [0, 0, 1, 0]
-
         new_quaternion = tf.transformations.quaternion_multiply(original_quaternion, rotation_quaternion)
-        target_orientation_z_new = new_quaternion[2]
-        target_orientation_w_new = new_quaternion[3]
-
-    return target_pose_x_new, target_pose_y_new, target_orientation_z_new, target_orientation_w_new
+        z, w = new_quaternion[2], new_quaternion[3]
+    return x, y, z, w
 
 
-def handle_navigate_drink(goal):
-    rospy.loginfo("Received a new goal to navigate to the drink.")
-    move_base_client = actionlib.SimpleActionClient('move_base', MoveBaseAction)
-    move_base_client.wait_for_server()
-    rospy.loginfo("Connected to move_base action server.")
+def send_goal(client, pose):
+    goal = MoveBaseGoal()
+    goal.target_pose.header.frame_id = "map"
+    goal.target_pose.header.stamp = rospy.Time.now()
+    goal.target_pose.pose.position.x, goal.target_pose.pose.position.y = pose[0], pose[1]
+    goal.target_pose.pose.orientation.z, goal.target_pose.pose.orientation.w = pose[2], pose[3]
+    client.send_goal(goal)
+    client.wait_for_result()
 
-    drink_goal = MoveBaseGoal()
-    drink_goal.target_pose.header.frame_id = "map"
-    drink_goal.target_pose.header.stamp = rospy.Time.now()
-    target_pose_x, target_pose_y,target_orientation_z,target_pose_w=location_offset(goal.target_x, goal.target_y, goal.target_orientation_z, goal.target_orientation_w)
-    drink_goal.target_pose.pose.position.x = target_pose_x
-    drink_goal.target_pose.pose.position.y = target_pose_y
-    drink_goal.target_pose.pose.orientation.z = target_orientation_z
-    drink_goal.target_pose.pose.orientation.w = target_pose_w
-    rospy.loginfo(f"Sending goal to move_base: {drink_goal}")
-
-    move_base_client.send_goal(drink_goal)
-    move_base_client.wait_for_result()
-    rospy.loginfo("Reached the drink location.")
-
-    object_data = load_object_poses(file_path)
-    expected_location_name = expected_location(goal.drink_name, object_data)
-    expected_location_pose = find_pose(expected_location_name, object_data)
-    rospy.loginfo(f"Expected location: {expected_location_name}, Pose: {expected_location_pose}")
-
-    expected_location_goal = MoveBaseGoal()
-    expected_location_goal.target_pose.header.frame_id = "map"
-    expected_location_goal.target_pose.header.stamp = rospy.Time.now()
-    expected_location_x, expected_location_y,expected_orientation_z,expected_location_w=location_offset(expected_location_pose["position"]["x"], expected_location_pose["position"]["y"],
-                                                             expected_location_pose["orientation"]["z"], expected_location_pose["orientation"]["w"])
-    rospy.loginfo("This is expected location x: " + str(expected_location_x) + " and y: " + str(expected_location_y) + " for drink: " + str(goal.drink_name))
-    expected_location_goal.target_pose.pose.position.x = expected_location_x
-    expected_location_goal.target_pose.pose.position.y = expected_location_y
-    expected_location_goal.target_pose.pose.orientation.z = expected_orientation_z
-    expected_location_goal.target_pose.pose.orientation.w = expected_location_w
-    rospy.loginfo(f"Sending goal to move_base for expected location: {expected_location_goal}")
-
-    move_base_client.send_goal(expected_location_goal)
-    move_base_client.wait_for_result()
-    rospy.loginfo("Reached the expected location.")
-
-    navigate_drink_feedback = NavigateDrinkFeedback()
-    navigate_drink_feedback.success = True
-    server.set_succeeded(navigate_drink_feedback)
-    rospy.loginfo("Navigation action succeeded.")
-
+def handle_navigate_drink(goal, client, data):
+    rospy.loginfo("Navigating to the drink location.")
+    drink_pose, expected_location = get_pose(data, goal.drink_name)
+    if drink_pose:
+        send_goal(client, adjust_pose(drink_pose))
+        rospy.loginfo("Reached the drink location.")
+    if expected_location:
+        rospy.loginfo("Navigating to the expected location.")
+        send_goal(client, adjust_pose(expected_location))
+        rospy.loginfo("Reached the expected location.")
 
 if __name__ == '__main__':
     rospy.init_node('navigate_drink_server')
-    server = actionlib.SimpleActionServer('navigate_drink', NavigateDrinkAction, handle_navigate_drink, False)
+    move_base_client = actionlib.SimpleActionClient('move_base', MoveBaseAction)
+    move_base_client.wait_for_server()
+
+    object_data = load_json(file_path)
+    server = actionlib.SimpleActionServer('navigate_drink', NavigateDrinkAction, lambda goal: handle_navigate_drink(goal, move_base_client, object_data), False)
     server.start()
     rospy.spin()
