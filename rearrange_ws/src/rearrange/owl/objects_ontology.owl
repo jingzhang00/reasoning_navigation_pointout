@@ -22,6 +22,9 @@
         <Class IRI="#Objects"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#People"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Robot"/>
     </Declaration>
     <Declaration>
@@ -73,7 +76,13 @@
         <Class IRI="#coke"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#female"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#juice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#male"/>
     </Declaration>
     <Declaration>
         <Class IRI="#table"/>
@@ -120,6 +129,10 @@
     <Declaration>
         <NamedIndividual IRI="#wheel"/>
     </Declaration>
+    <SubClassOf>
+        <Class IRI="#People"/>
+        <Class IRI="#Objects"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Robot"/>
         <Class IRI="#Objects"/>
@@ -189,8 +202,16 @@
         <Class IRI="#Beverage"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#female"/>
+        <Class IRI="#People"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#juice"/>
         <Class IRI="#Beverage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#male"/>
+        <Class IRI="#People"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#table"/>

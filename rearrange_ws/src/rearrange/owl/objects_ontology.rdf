@@ -59,6 +59,14 @@
     
 
 
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#People -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#People">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Objects"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#Robot -->
 
     <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#Robot">
@@ -195,10 +203,26 @@
     
 
 
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#female -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#female">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#People"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#juice -->
 
     <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#juice">
         <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#Beverage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.chalmers.se/ontologies/objects_ontology.owl#male -->
+
+    <owl:Class rdf:about="http://www.chalmers.se/ontologies/objects_ontology.owl#male">
+        <rdfs:subClassOf rdf:resource="http://www.chalmers.se/ontologies/objects_ontology.owl#People"/>
     </owl:Class>
     
 

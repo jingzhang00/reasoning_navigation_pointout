@@ -2,6 +2,7 @@
 cd src/rearrange/worlds
 cp small_office.world /tiago_public_ws/src/pal_gazebo_worlds/worlds
 ```
+close terminal.
 
 In terminal 1:
 ```bash

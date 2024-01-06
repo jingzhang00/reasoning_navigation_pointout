@@ -32,7 +32,7 @@ def adjust_pose(pose):
     if y > 0:
         x -= 0.5
     else:
-        x += 1.2
+        x += 1
         original_quaternion = [0, 0, z, w]
         rotation_quaternion = [0, 0, 1, 0]
         new_quaternion = tf.transformations.quaternion_multiply(original_quaternion, rotation_quaternion)
