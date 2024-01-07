@@ -4624,10 +4624,10 @@
       <wall_time>1704573785 902345015</wall_time>
       <iterations>42873</iterations>
       <model name='beer'>
-        <pose>-0.9996 -6.77731 0.795121 -0.002167 0.000159 0.019821</pose>
+        <pose>-0.43 -6.77731 0.795121 -0.002167 0.000159 0.019821</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-0.999586 -6.77707 0.910121 -0.002167 0.000159 0.019821</pose>
+          <pose>-0.43 -6.77707 0.910121 -0.002167 0.000159 0.019821</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 -9.81 0 -0 0</acceleration>
           <wrench>0 0 -3.8259 0 -0 0</wrench>
