@@ -14,6 +14,7 @@ file_path = '/home/user/exchange/ssy236_project/rearrange_ws/src/rearrange/queri
 cur_coke_command =  "rosrun tiago_moveit_tutorial plan_arm_torso_fk  0.35 0.4 0.3 -1.7 1.5 -1.2 1.2 0"
 cur_beer_command =  "rosrun tiago_moveit_tutorial plan_arm_torso_fk  0.25 0.4 -0.2 -1.7 1.5 -1.2 1.2 0"
 dst_command = "rosrun tiago_moveit_tutorial plan_arm_torso_fk  0.27 0.4 -0.3 -1.7 1.5 -1.5 1.14 0"
+
 def load_json(file_path):
     try:
         with open(file_path, 'r') as json_file:
@@ -43,6 +44,7 @@ def adjust_pose(pose):
         new_quaternion = tf.transformations.quaternion_multiply(original_quaternion, rotation_quaternion)
         z, w = new_quaternion[2], new_quaternion[3]
     return x, y, z, w
+
 #! step2: move to take the drink
 def adjust_pose_step2(pose):
     x, y, z, w = pose['position']['x'], pose['position']['y'], pose['orientation']['z'], pose['orientation']['w']
