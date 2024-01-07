@@ -4,7 +4,7 @@ pip install pyswip
 
 ```bash
 cd src/rearrange/worlds
-cp small_office.world /tiago_public_ws/src/pal_gazebo_worlds/worlds
+cp /home/user/exchange/ssy236_project/rearrange_ws/src/rearrange/worlds/small_office.world /tiago_public_ws/src/pal_gazebo_worlds/worlds
 ```
 
 In terminal 1:

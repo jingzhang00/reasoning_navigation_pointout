@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:ros="http://www.ros.org/ont/ROS.owl#"
+   xmlns:wf="http://www.ease-crc.org/ont/EASE-WF.owl#"
+>
+  <rdf:Description rdf:about="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Binding_tiago_pose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wf:hasBindingFiller rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPoseRequest"/>
+    <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE-WF.owl#RoleFillerBinding"/>
+    <wf:hasBindingRole rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Input_tiago_pose"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#SetInitTiagoPoseRequest_tiago_pose">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/geometry_msgs.owl#Pose"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tiago_pose</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#MessageSlot"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Execution">
+    <wf:hasBinding rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Binding_tiago_pose"/>
+    <wf:hasBinding rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Binding_confirmation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dul:describes rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose"/>
+    <dul:defines rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Task"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#ROSQueryingExecution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose">
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#ServiceInterface"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rearrange/SetInitTiagoPose</ros:hasTypePath>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">506d0acd0d4a87fa64b5270d2249c2f0</ros:hasMD5>
+    <ros:hasRequestType rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPoseReqest"/>
+    <ros:hasResponseType rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPoseResponse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPoseReqest">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#SetInitTiagoPoseRequest_tiago_pose"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rearrange/SetInitTiagoPoseRequest</ros:hasTypePath>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f0c4efcc8725e1ae77feed8e82677da1</ros:hasMD5>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#SetInitTiagoPoseResponse_confirmation">
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confirmation</ros:hasSlotName>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#bool"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPoseResponse">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#SetInitTiagoPoseResponse_confirmation"/>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f27299616d4eae5b55699f532a896283</ros:hasMD5>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rearrange/SetInitTiagoPoseResponse</ros:hasTypePath>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Output_confirmation">
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Binding_confirmation">
+    <wf:hasBindingRole rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Output_confirmation"/>
+    <rdf:type rdf:resource="http://www.ease-crc.org/ont/EASE-WF.owl#RoleFillerBinding"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <wf:hasBindingFiller rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPoseResponse"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Task">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dul:hasParameter rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Input_tiago_pose"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Task"/>
+    <dul:hasParameter rdf:resource="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Output_confirmation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/srv/rearrange.owl#SetInitTiagoPose_Input_tiago_pose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter"/>
+  </rdf:Description>
+</rdf:RDF>

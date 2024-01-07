@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:ros="http://www.ros.org/ont/ROS.owl#"
+>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkAction_action_result">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionResult"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">action_result</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#MessageSlot"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkAction">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkAction_action_goal"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkAction_action_result"/>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ad8ae92042c341ed02b3cb999b960fa4</ros:hasMD5>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkAction_action_feedback"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rearrange/NavigateDrinkAction</ros:hasTypePath>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkAction_action_goal">
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#MessageSlot"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">action_goal</ros:hasSlotName>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionGoal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkAction_action_feedback">
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">action_feedback</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#MessageSlot"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionFeedback"/>
+  </rdf:Description>
+</rdf:RDF>

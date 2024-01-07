@@ -1,0 +1,2 @@
+rearrange
+-DCATKIN_DEVEL_PREFIX=/home/user/exchange/ssy236_project/rearrange_ws/devel -DCMAKE_INSTALL_PREFIX=/home/user/exchange/ssy236_project/rearrange_ws/install -G Unix Makefiles

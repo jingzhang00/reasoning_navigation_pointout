@@ -1,0 +1,8 @@
+prefix=/home/user/exchange/ssy236_project/rearrange_ws/devel
+
+Name: rearrange
+Description: Description of rearrange
+Version: 0.0.0
+Cflags: -I/home/user/exchange/ssy236_project/rearrange_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs gazebo_msgs geometry_msgs rosprolog

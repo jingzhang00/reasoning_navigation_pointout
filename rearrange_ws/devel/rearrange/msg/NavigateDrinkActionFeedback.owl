@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:ros="http://www.ros.org/ont/ROS.owl#"
+>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionFeedback_feedback">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#MessageSlot"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feedback</ros:hasSlotName>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkFeedback"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionFeedback_header">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/std_msgs.owl#Header"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#MessageSlot"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">header</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionFeedback_status">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/actionlib_msgs.owl#GoalStatus"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#MessageSlot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionFeedback">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionFeedback_header"/>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abd7a3a530092afd199f25d16b1751a3</ros:hasMD5>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionFeedback_status"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionFeedback_feedback"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rearrange/NavigateDrinkActionFeedback</ros:hasTypePath>
+  </rdf:Description>
+</rdf:RDF>

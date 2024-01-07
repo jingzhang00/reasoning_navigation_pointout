@@ -8,6 +8,7 @@ from rearrange.msg import NavigateDrinkAction, NavigateDrinkFeedback, NavigateDr
 import json
 import tf
 import math
+import subprocess
 
 file_path = '/home/user/exchange/ssy236_project/rearrange_ws/src/rearrange/queries/object_pose.json'
 
@@ -41,12 +42,12 @@ def location_offset(target_pose_x, target_pose_y, target_orientation_z, target_o
     If target_pose_y is negative, it adjusts target_pose_x by +1.2 and rotates the orientation by 180 degrees around the Z-axis.
     """
     if target_pose_y > 0:
-        target_pose_x_new = target_pose_x - 0.5
+        target_pose_x_new = target_pose_x - 1
         target_pose_y_new = target_pose_y
         target_orientation_z_new = target_orientation_z
         target_orientation_w_new = target_orientation_w
     else:
-        target_pose_x_new = target_pose_x + 1.2
+        target_pose_x_new = target_pose_x + 1.1
         target_pose_y_new = target_pose_y
 
         # Original orientation quaternion
@@ -81,6 +82,33 @@ def handle_navigate_drink(goal):
     move_base_client.send_goal(drink_goal)
     move_base_client.wait_for_result()
     rospy.loginfo("Reached the drink location.")
+    
+    cur_coke_command =  "rosrun tiago_moveit_tutorial plan_arm_torso_fk  0.35 0.4 0.3 -1.7 1.5 -1.2 1.2 0"
+    cur_beer_command =  "rosrun tiago_moveit_tutorial plan_arm_torso_fk  0.25 0.4 -0.2 -1.7 1.5 -1.2 1.2 0"
+    dst_command = "rosrun tiago_moveit_tutorial plan_arm_torso_fk  0.27 0.4 -0.3 -1.7 1.5 -1.5 1.14 0"
+    
+    # To lift the arm
+    if goal.drink_name == "coke":
+        subprocess.run(cur_coke_command, shell=True)
+        #! here, move the robot to take the drink
+        drink_goal.target_pose.pose.position.x = target_pose_x+0.5
+        drink_goal.target_pose.pose.position.y = target_pose_y
+        drink_goal.target_pose.pose.orientation.z = target_orientation_z
+        drink_goal.target_pose.pose.orientation.w = target_pose_w
+        rospy.loginfo(f"Taking : {drink_goal}")
+        move_base_client.send_goal(drink_goal)
+        move_base_client.wait_for_result()
+        rospy.loginfo("Took the drink location.")
+    elif goal.drink_name == "beer":
+        subprocess.run(cur_beer_command, shell=True)
+        drink_goal.target_pose.pose.position.x = target_pose_x-0.5
+        drink_goal.target_pose.pose.position.y = target_pose_y
+        drink_goal.target_pose.pose.orientation.z = target_orientation_z
+        drink_goal.target_pose.pose.orientation.w = target_pose_w
+        rospy.loginfo(f"Taking : {drink_goal}")
+        move_base_client.send_goal(drink_goal)
+        move_base_client.wait_for_result()    
+    rospy.sleep(3)
 
     object_data = load_object_poses(file_path)
     expected_location_name = expected_location(goal.drink_name, object_data)
@@ -102,6 +130,9 @@ def handle_navigate_drink(goal):
     move_base_client.send_goal(expected_location_goal)
     move_base_client.wait_for_result()
     rospy.loginfo("Reached the expected location.")
+    
+    subprocess.run(dst_command, shell=True) 
+    rospy.sleep(3)
 
     navigate_drink_feedback = NavigateDrinkFeedback()
     navigate_drink_feedback.success = True

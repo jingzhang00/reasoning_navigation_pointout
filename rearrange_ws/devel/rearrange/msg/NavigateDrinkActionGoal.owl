@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:ros="http://www.ros.org/ont/ROS.owl#"
+>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionGoal_header">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">header</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#MessageSlot"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/std_msgs.owl#Header"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionGoal_goal_id">
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">goal_id</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#MessageSlot"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/actionlib_msgs.owl#GoalID"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionGoal">
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4ebbb6521df8201312e3ab1f230a8a31</ros:hasMD5>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionGoal_header"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rearrange/NavigateDrinkActionGoal</ros:hasTypePath>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionGoal_goal_id"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionGoal_goal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkActionGoal_goal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#MessageSlot"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">goal</ros:hasSlotName>
+  </rdf:Description>
+</rdf:RDF>

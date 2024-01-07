@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:ros="http://www.ros.org/ont/ROS.owl#"
+>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkResult">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkResult_current_y"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkResult_current_x"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkResult_current_orientation_z"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rearrange/NavigateDrinkResult</ros:hasTypePath>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5332c945bfb39768317dc31e78fb16d0</ros:hasMD5>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkResult_current_orientation_w"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkResult_current_orientation_z">
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#float32"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current_orientation_z</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkResult_current_x">
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#float32"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current_x</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkResult_current_orientation_w">
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#float32"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current_orientation_w</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkResult_current_y">
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#float32"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current_y</ros:hasSlotName>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:ros="http://www.ros.org/ont/ROS.owl#"
+>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal_drink_name">
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drink_name</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#string"/>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal">
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal_drink_name"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal_target_x"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal_target_orientation_w"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal_target_y"/>
+    <ros:hasTypePath rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rearrange/NavigateDrinkGoal</ros:hasTypePath>
+    <dul:hasPart rdf:resource="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal_target_orientation_z"/>
+    <ros:hasMD5 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60af8d6775a7d74b1f37c4f2a62945fb</ros:hasMD5>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal_target_x">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">target_x</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#float32"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal_target_orientation_z">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">target_orientation_z</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#float32"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal_target_y">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">target_y</ros:hasSlotName>
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#float32"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ros.org/msg/rearrange.owl#NavigateDrinkGoal_target_orientation_w">
+    <rdf:type rdf:resource="http://www.ros.org/ont/ROS.owl#PrimitiveSlot"/>
+    <dul:hasPart rdf:resource="http://www.ros.org/ont/ROS.owl#float32"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <ros:hasSlotName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">target_orientation_w</ros:hasSlotName>
+  </rdf:Description>
+</rdf:RDF>
